@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width,
+  initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- EMOJI BACKGROUND -->
+<div id="emoji-container"></div>
+
+<!-- PANEL 1 -->
+<section class="panel active" id="panel1">
+  <h1>On Your Special Dayy♕</h1>
+
+  <img src="images/me.jpeg" class="profile">
+
+  <p class="custom-name">from : fida<br>
+   to : farelll my luppyyy</p>
+  <p>hallowww, it’s me..🤍<br>
+    orang baru yang baru saja muncul di hidupmu.<br>  
+    hari ini hari spesialmuu, im sorry i couldn't give u<br>
+    something useful and only can made u something simple like this..✨<br>  
+    i hope u like it..</p>
+  <p>Klik tombol di bawah<br>
+       ⬇️</p>
+
+  <div class="panel-buttons">
+    <button onclick="nextPanel()">Next</button>
+  </div>
+</section>
+
+<!-- PANEL 2 -->
+<section class="panel" id="panel2">
+  <h1><b>Our Memories🎞️✨</b></h1>
+  <p>this is what we have so far..
+    sebenernya banyak,cuma laptopku penuh memory..hikss😭🙏🏻
+  </p>
+
+  <div class="gallery">
+    <div class="item">
+    <img src="images/m1.jpeg">
+    </div>
+
+    <div class="item">
+    <img src="images/m2.jpeg">
+    </div>
+
+    <div class="item">
+    <img src="images/m3.jpeg">
+    </div>
+
+    <div class="item">
+    <img src="images/m4.jpeg">
+    </div>
+
+    <div class="item">
+    <img src="images/m5.jpeg">
+    </div>
+    <div class="item">
+    <img src="images/m6.jpeg">
+    </div>
+  </div>
+
+  <div class="panel-buttons">
+    <button onclick="prevPanel()">Back</button>
+    <button onclick="nextPanel()">Next</button>
+  </div>
+</section>
+
+<!-- PANEL 3 -->
+<section class="panel" id="panel3">
+  <h1><b>𝄞⨾𓍢ִ໋ A Song Just For You</b></h1>
+
+  <video controls>
+    <source src="videos/song.mp4" type="video/mp4">
+  </video>
+
+  <p><b>Best Part</b>
+    Ft. Daniel Caesar<br>
+    🎧ྀི♪⋆.✮</p>
+
+ <p>This song reminds me of you.<br>
+    Not in a loud or dramatic way,<br> 
+    but in a calm, warm, and real one.<br>
+    It talks about someone who quietly becomes<br>
+    the best part of a day just by being there.<br>
+    Enjoyy the music until the last panel yeaa😚..</p>
+
+  <div class="panel-buttons">
+    <button onclick="prevPanel()">Back</button>
+    <button onclick="nextPanel()">Next</button>
+  </div>
+</section>
+
+<!-- PANEL 4 -->
+<section class="panel" id="panel4">
+  <h1>💌</h1>
+  <h2>I Wrote A Small Letter For You</h2>
+  <p><b>read it slowly would you?..</b></p>
+  <div class="panel-buttons">
+    <button onclick="prevPanel()">Back</button>
+    <button onclick="nextPanel()">Next</button>
+  </div>
+</section>
+
+<!-- PANEL 5 -->
+<section class="panel" id="panel5">
+  <h2>Do u want open it? ฅ⁠^⁠•⁠ﻌ⁠•⁠^⁠ฅ</h2>
+
+  <video autoplay muted loop>
+    <source src="videos/meme.mp4" type="video/mp4">
+  </video>
+
+  <div class="panel-buttons">
+    <button onclick="openLetter()">Open it</button>
+    <button onclick="noThanks()">No thx</button>
+  </div>
+</section>
+
+<!-- PANEL 6 : LETTER -->
+<section class="panel" id="panel6">
+  <h2>With Care..🤍</h2>
+  <div class="letter-container">
+    <img src="images/letter.jpeg" class="letter-img">
+  </div>
+  <br>ℒ𝓸𝓿𝒆 𝔂𝓸𝓾♡</br>
+  <div class="panel-buttons">
+    <button onclick="backToLetterIntro()">Back</button>
+  </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

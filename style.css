@@ -1,0 +1,156 @@
+html, body{
+  margin: 0;
+  padding : 0;
+  min-height : 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Patrick Hand', cursive;
+  background: #bcdcff;
+  text-align: center;
+}
+
+/* PANEL */
+  .panel {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+
+  padding: 40px;
+  z-index: 10;
+
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: opacity 0.5s ease;
+}
+
+  .panel.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+
+/* CENTER IMAGE & VIDEO */
+.panel img,
+.panel video {
+  display: block;
+  margin: 0 auto 25px auto;
+}
+
+/* FOTO PROFIL */
+.profile {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #4da6ff;
+}
+
+/* BUTTON */
+.panel-buttons {
+  margin-top: 20px;
+  position: relative;
+  z-index: 20;
+}
+
+button {
+  background: #2f5fbf;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 5px;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 20px 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery img {
+  width: 160px;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #4da6ff;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Animasi pas disentuh */
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* VIDEO */
+video {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #4da6ff;
+}
+
+/* LETTER */
+.letter-container {
+  position: relative;
+  display: inline-block;
+}
+
+.letter-img {
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #4da6ff;
+}
+
+/* EMOJI BACKGROUND */
+.emoji {
+  position: fixed;
+  font-size: 24px;
+  animation: floatUp 6s linear forwards;
+  z-index: 1;              /* DI BELAKANG PANEL */
+  pointer-events: none;   /* TIDAK BISA DIKLIK */
+}
+
+@keyframes floatUp {
+  from { bottom: -50px; opacity: 1; }
+  to { bottom: 100%; opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    justify-content: flex-start;
+  }
+
+  .gallery img {
+    width: 200px;
+  }
+
+  .item {
+  flex-shrink: 0;
+  width: 160px;
+  text-align: center;
+}
+
+.item p {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #444;
+  min-height: 32px;
+}
+}
+
